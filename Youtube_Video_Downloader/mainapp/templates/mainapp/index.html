@@ -260,11 +260,12 @@ input[type="search"] {
   
     <div class="cover">
       <h1>Download your youtube videos here.</h1>
-      <form  class="flex-form">
+      <form action="" method="POST"  class="flex-form">
+        {% csrf_token %}
         <label for="from">
           <i class="ion-location"></i>
         </label>
-        <input type="search" placeholder="What video do you want to download?">
+        <input type="search" name="youtubeurl" placeholder="What video do you want to download?">
         <input type="submit" value="Search">
       </form>
       <div id="madeby">
